@@ -9,7 +9,8 @@ public class S19 {
 	 * */
 	
     public static String notReplace(String str) {
-        StringBuilder resultado = new StringBuilder();
+        //StringBuilder resultado = new StringBuilder();
+        String resultado = "";
         boolean esPrecedidoPorLetra;
         boolean tieneUnaLetraDespues;
         
@@ -23,16 +24,19 @@ public class S19 {
                 
                 if (!esPrecedidoPorLetra && !tieneUnaLetraDespues) {
                     //Si no está precedido ni seguido por una letra, reemplaza "is" por "is not"
-                    resultado.append("is not");                    
+                    //resultado.append("is not");          
+                	resultado = resultado + "is not";
                 } else {
                     //Si está precedido o seguido por una letra, solo agrega "is"
-                    resultado.append("is");
+                    //resultado.append("is");
+                    resultado = resultado + "is";
                 }
                 
                 i++; //Tanto si esta precedido por letras o no, tenemos que saltar una posicion mas para pasar el "is" por completo
             } else {
                 //Si no es "is", agrega el carácter actual
-                resultado.append(str.charAt(i));
+                //resultado.append(str.charAt(i));
+            	resultado = resultado + str.charAt(i);
             }
         }
         

@@ -9,18 +9,21 @@ public class S13 {
 	 */
 	
 	public static String wordEnds(String str, String strDelanteDetras) {
-        StringBuilder resultado = new StringBuilder();
+        //StringBuilder resultado = new StringBuilder();
+		String resultado = "";
         
         for (int i = 0; i < str.length() - strDelanteDetras.length() + 1; i++) {
             //Comprobar si la subcadena coincide con el "target"
             if (str.substring(i, i + strDelanteDetras.length()).equals(strDelanteDetras)) {
                 // Si hay un carácter antes de la palabra "target", lo agregamos
                 if (i > 0) {
-                    resultado.append(str.charAt(i - 1));
+                    //resultado.append(str.charAt(i - 1));
+                	resultado = resultado + str.charAt(i - 1);
                 }
                 // Si hay un carácter después de la palabra "target", lo agregamos
                 if (i + strDelanteDetras.length() < str.length()) {
-                    resultado.append(str.charAt(i + strDelanteDetras.length()));
+                    //resultado.append(str.charAt(i + strDelanteDetras.length()));
+                	resultado = resultado + str.charAt(i + strDelanteDetras.length());
                 }
             }
         }
